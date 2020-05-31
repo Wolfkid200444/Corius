@@ -22,4 +22,4 @@ bot.on('disconnect', () => errorHandler.disconnect())
 process.on("uncaughtException", err => errorHandler.unhandledRejection(err));
 process.on('unhandledRejection', (err) => errorHandler.unhandledRejection(err));
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
