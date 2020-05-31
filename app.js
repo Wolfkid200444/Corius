@@ -7,7 +7,6 @@ const bot = new Client({
     messageCacheLifetime: 240,
     messageSweepInterval: 300,
 });
-const { token } = require('./assets/config.json');
 
 ['commands','aliases', 'usage', 'cooldownTime'].forEach(x => bot[x] = new Collection());
 ['command', 'event'].forEach(x => require(`./assets/handlers/${x}`)(bot));
